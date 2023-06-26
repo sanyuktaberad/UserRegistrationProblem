@@ -32,8 +32,8 @@ public class UserRegistration {
         boolean result3 = m.matches();
         System.out.println(result3);
 
-        Pattern password = Pattern.compile("[A-za-z]+");
-        Matcher p = password.matcher("passWord");
+        Pattern password = Pattern.compile("[A-za-z0-9]+");
+        Matcher p = password.matcher("passWord12");
         boolean result4 = p.matches();
         System.out.println(result4);
     }
