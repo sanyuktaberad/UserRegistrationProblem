@@ -14,5 +14,14 @@ public class UserRegistration {
         Matcher l = lastName.matcher("Berad");
         boolean result1 = l.matches();
         System.out.println(result1);
+
+        String startingOfEmail ="^[a-z]+[._-][a-z]+";
+        String middleOfEmail = "[@][a-z.]+";
+        String endingOfEmail ="[co.in]";
+        String patternForEmail = startingOfEmail + middleOfEmail + endingOfEmail;
+        Pattern email = Pattern.compile(patternForEmail);
+        Matcher e = email.matcher("abc.xyz@bl.co.in");
+        boolean result2 = e.matches();
+        System.out.println(result2);
     }
 }
