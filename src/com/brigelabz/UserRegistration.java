@@ -23,5 +23,18 @@ public class UserRegistration {
         Matcher e = email.matcher("abc.xyz@bl.co.in");
         boolean result2 = e.matches();
         System.out.println(result2);
+
+        String startingOfMobileNo ="^[91]\\s";
+        String endingOfMobileNo ="[0-9]+";
+        String mobileNOPattern = startingOfMobileNo + endingOfMobileNo;
+        Pattern mobileNo = Pattern.compile(mobileNOPattern);
+        Matcher m = mobileNo.matcher("91 9028183398");
+        boolean result3 = m.matches();
+        System.out.println(result3);
+
+        Pattern password = Pattern.compile("[A-za-z]{8,}");
+        Matcher p = password.matcher("Password");
+        boolean result4 = p.matches();
+        System.out.println(result4);
     }
 }
